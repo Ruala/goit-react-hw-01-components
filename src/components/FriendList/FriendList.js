@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FriendListItem from '../FriendListItem/FriendListItem';
+import './FriendList.scss';
 
 const FriendList = ({ friends }) => (
-  <ul className="friend-list">
+  <ul className="Friend-list">
     {friends.map(({ id, avatar, name, isOnline }) => (
       <FriendListItem
         key={id}

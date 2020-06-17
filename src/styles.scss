@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 16px;
+  color: #222;
+  background-color: #e7ecf2;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

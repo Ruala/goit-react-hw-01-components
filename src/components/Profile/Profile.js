@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Profile.scss';
 
 const Profile = ({ name, tag, location, avatar, stats }) => (
   <div className="Profile">
@@ -15,18 +16,18 @@ const Profile = ({ name, tag, location, avatar, stats }) => (
       <p className="Profile__location">{location}</p>
     </div>
 
-    <ul className="stats">
-      <li>
-        <span className="label">Followers</span>
-        <span className="quantity">{stats.followers}</span>
+    <ul className="Profile__stats">
+      <li className="Profile__item">
+        <span className="Profile__label">Followers</span>
+        <span className="Profile__quantity">{stats.followers}</span>
       </li>
-      <li>
-        <span className="label">Views</span>
-        <span className="quantity">{stats.views}</span>
+      <li className="Profile__item">
+        <span className="Profile__label">Views</span>
+        <span className="Profile__quantity">{stats.views}</span>
       </li>
-      <li>
-        <span className="label">Likes</span>
-        <span className="quantity">{stats.likes}</span>
+      <li className="Profile__item">
+        <span className="Profile__label">Likes</span>
+        <span className="Profile__quantity">{stats.likes}</span>
       </li>
     </ul>
   </div>
