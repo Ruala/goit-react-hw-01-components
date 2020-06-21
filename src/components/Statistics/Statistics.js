@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Statistics.scss';
+import { randomColorGenerator } from '../helper/helper';
 
 const Statistics = ({ title, stats }) => (
   <section className="Statistics">
@@ -8,7 +9,11 @@ const Statistics = ({ title, stats }) => (
 
     <ul className="stat-list">
       {stats.map(({ id, label, percentage }) => (
-        <li key={id} className="stat-list__item">
+        <li
+          key={id}
+          className="stat-list__item"
+          style={{ backgroundColor: randomColorGenerator() }}
+        >
           <span className="stat-list__label">{label}</span>
           <span className="stat-list__percentage">{percentage}%</span>
         </li>
